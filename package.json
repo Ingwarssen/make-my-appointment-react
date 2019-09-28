@@ -1,0 +1,19 @@
+{
+  "name": "make-my-appointment-react",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [],
+  "author": "Ingwarssen",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "next": "^9.0.7",
+    "react": "^16.10.0",
+    "react-dom": "^16.10.0"
+  }
+}
