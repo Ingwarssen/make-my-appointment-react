@@ -19,7 +19,26 @@
     }
   },
   "rules": {
-    "no-console": "error",
-    "semi": ["error", "never"]
+    "no-console": "off",
+    "semi": ["error", "never"],
+    "object-curly-spacing": ["error", "always"],
+    "max-len": ["error", { "code": 100 }],
+    "arrow-parens": ["error", "as-needed"],
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "quotes": ["error", "single", { "avoidEscape": true }],
+    "quote-props": ["error", "as-needed"],
+    "new-cap": ["error", { "capIsNew": false }],
+    "require-jsdoc": [
+      "error",
+      {
+        "require": {
+          "FunctionDeclaration": false,
+          "MethodDefinition": false,
+          "ClassDeclaration": false,
+          "ArrowFunctionExpression": false,
+          "FunctionExpression": false
+        }
+      }
+    ]
   }
 }
