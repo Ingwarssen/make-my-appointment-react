@@ -13,7 +13,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
 import Copyright from '../components/auth/Copyright'
-// import FacebookLogin from 'react-facebook-login'
+import FacebookLogin from 'react-facebook-login'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -47,8 +47,8 @@ const useStyles = makeStyles(theme => ({
 const SignInSide = () => {
   const classes = useStyles()
 
-  // const responseFacebook = res => console.log(res)
-  // const componentClicked = res => console.log(res)
+  const responseFacebook = res => console.log(res)
+  const componentClicked = res => console.log(res)
 
   return (
     <Grid container component="main" className={classes.root}>
@@ -98,13 +98,13 @@ const SignInSide = () => {
             >
               Sign In
             </Button>
-            {/* <FacebookLogin
+            <FacebookLogin
               appId="390625541666819"
               autoLoad={false}
               fields="name,email,picture"
               onClick={componentClicked}
               callback={responseFacebook}
-            /> */}
+            />
             <Grid container>
               <Grid item xs>
                 <Link href="#" variant="body2">
