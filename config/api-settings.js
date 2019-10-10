@@ -1,6 +1,10 @@
 export const api = {
-  url: () => 'http://dev.strapi-api.human-3d.com:1337/',
+  url: () => 'http://localhost:3001/api/v1/mobile/',
   points: {
+    auth: {
+      settings: () => 'auth/settings',
+      facebook: () => 'auth/facebook',
+    },
     models: {
       get: () => 'models',
     },

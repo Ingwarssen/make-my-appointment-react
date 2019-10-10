@@ -7,7 +7,6 @@ const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = app.getRequestHandler()
 
-console.log('dir?', __dirname)
 const key = fs.readFileSync(__dirname + '/certs/selfsigned.key')
 const cert = fs.readFileSync(__dirname + '/certs/selfsigned.crt')
 const httpsOptions = { key, cert }
