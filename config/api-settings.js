@@ -1,5 +1,5 @@
 export const api = {
-  url: () => 'http://localhost:3001/api/v1/mobile/',
+  url: () => 'https://localhost:3001/api/v1/mobile/',
   points: {
     auth: {
       settings: () => 'auth/settings',
