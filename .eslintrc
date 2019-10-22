@@ -19,6 +19,7 @@
     }
   },
   "rules": {
+    "react/react-in-jsx-scope": "off",
     "arrow-parens": ["error", "as-needed"],
     "indent": ["error", 2, { "SwitchCase": 1 }],
     "no-console": "off",
