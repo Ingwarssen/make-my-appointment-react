@@ -1,16 +1,14 @@
 // core components
-import React from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import AppBar from 'components/AppBar'
-import PropTypes from 'prop-types'
+import AppFooter from 'components/AppFooter'
 
 import { makeStyles } from '@material-ui/styles'
 
 const useStyles = makeStyles(() => ({
   root: {
     position: 'relative',
-    maxWidth: '1440px',
-    background: '#F9FAFC',
     margin: '0 auto',
   },
 }))
@@ -22,13 +20,12 @@ let Layout = ({ children, jwtToken }) => {
     <div className={classes.root}>
       <AppBar fixed jwtToken={jwtToken} />
       <div className="body-container">{children}</div>
-      <div>footer</div>
+      <AppFooter />
     </div>
   )
 }
 
 const mapStateToProps = state => {
-  console.log('my state', state)
   const { jwtToken } = state.auth
   return { jwtToken }
 }
