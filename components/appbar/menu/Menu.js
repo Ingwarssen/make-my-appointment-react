@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { connect } from 'react-redux'
+import Router from 'next/router'
 import PropTypes from 'prop-types'
 import Menu from '@material-ui/core/Menu'
 import MenuItem from '@material-ui/core/MenuItem'
@@ -37,7 +38,15 @@ let SimpleMenu = ({ logout }) => {
         onClose={handleClose}
       >
         <MenuItem onClick={handleClose}>Profile</MenuItem>
-        <MenuItem>My account</MenuItem>
+        <MenuItem
+          onClick={() =>
+            Router.push({
+              pathname: '/profile/phone',
+            })
+          }
+        >
+          My account
+        </MenuItem>
         <MenuItem onClick={logout}>Logout</MenuItem>
       </Menu>
     </div>
