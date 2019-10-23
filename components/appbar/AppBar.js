@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
-import { logout } from '../lib/auth/actions'
+import Menu from './menu/Menu'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -27,15 +27,6 @@ const Login = () => (
     Login
   </Button>
 )
-const Logout = ({ logout }) => (
-  <Button href="/" color="inherit" onClick={logout}>
-    Logout
-  </Button>
-)
-
-Logout.propTypes = {
-  logout: PropTypes.func,
-}
 
 let ButtonAppBar = ({ jwtToken, logout }) => {
   const classes = useStyles()
@@ -52,7 +43,7 @@ let ButtonAppBar = ({ jwtToken, logout }) => {
               GFamily
             </Button>
           </Typography>
-          {jwtToken ? <Logout logout={logout} /> : <Login />}
+          {jwtToken ? <Menu /> : <Login />}
         </Toolbar>
       </AppBar>
     </div>
@@ -69,11 +60,6 @@ const mapStateToProps = state => {
   return { jwtToken }
 }
 
-const mapDispatchToProps = { logout }
-
-ButtonAppBar = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(ButtonAppBar)
+ButtonAppBar = connect(mapStateToProps)(ButtonAppBar)
 
 export default ButtonAppBar

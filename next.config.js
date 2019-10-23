@@ -8,6 +8,7 @@ const nextConfig = {
     config.resolve.alias['static'] = path.join(__dirname, 'static')
     config.resolve.alias['store'] = path.join(__dirname, 'store')
     config.resolve.alias['utils'] = path.join(__dirname, 'utils')
+    config.resolve.alias['lib'] = path.join(__dirname, 'lib')
 
     return config
   },

@@ -31,7 +31,7 @@ class MyApp extends App {
       pageProps = await Component.getInitialProps({ ctx })
     }
 
-    const authToken = Cookies.getItem(ctx.req.headers.cookie, 'authToken')
+    const authToken = ctx.req && Cookies.getItem(ctx.req.headers.cookie, 'authToken')
     return { pageProps, authToken }
   }
 

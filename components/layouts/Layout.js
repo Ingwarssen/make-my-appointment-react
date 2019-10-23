@@ -1,7 +1,7 @@
 // core components
 import React from 'react'
 import PropTypes from 'prop-types'
-import AppBar from 'components/AppBar'
+import AppBar from 'components/appbar/AppBar'
 import { makeStyles } from '@material-ui/styles'
 
 const useStyles = makeStyles(() => ({
