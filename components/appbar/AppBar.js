@@ -28,7 +28,7 @@ const Login = () => (
   </Button>
 )
 
-let ButtonAppBar = ({ jwtToken, logout }) => {
+let ButtonAppBar = ({ jwtToken }) => {
   const classes = useStyles()
 
   return (
@@ -38,7 +38,7 @@ let ButtonAppBar = ({ jwtToken, logout }) => {
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" className={classes.title}>
+          <Typography variant="h6" className={classes.title} color="inherit">
             <Button href="/" color="inherit">
               GFamily
             </Button>
@@ -52,7 +52,6 @@ let ButtonAppBar = ({ jwtToken, logout }) => {
 
 ButtonAppBar.propTypes = {
   jwtToken: PropTypes.string,
-  logout: PropTypes.func,
 }
 
 const mapStateToProps = state => {
